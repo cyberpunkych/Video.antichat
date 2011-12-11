@@ -1,0 +1,19 @@
+To install the script, very simply follow the steps below.
+
+------------------------------------------------------------
+INSTALLATION
+------------------------------------------------------------
+
+1. Upload everything but the database to the root folder of your server. 
+
+2. Create a database.
+
+3. Change the first line of import_database.sql to your databases name (open with a text editor, such as notepad).
+
+3. Open settings.php and edit the database part inserting your database name, user and password.
+
+4. *Suggested - Change the username and password for admin/password (default) within settings.php.
+
+5. Navigate to http://yousite.com/admin.php and login.
+
+

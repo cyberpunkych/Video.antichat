@@ -1,0 +1,1 @@
+USE DB;/*[20:21:12][  47 ms]*/ ALTER TABLE `DB`.`videos`     ADD COLUMN `views` INT(100) DEFAULT '0' NOT NULL AFTER `raters`;/*[20:25:31][  46 ms]*/ CREATE TABLE `DB`.`visitor_views`(     `id` INT(10) NOT NULL AUTO_INCREMENT ,     `hostname` TEXT(200) ,     `visited_id` INT(10) ,     `date` TEXT(100) ,     PRIMARY KEY (`id`)  );
