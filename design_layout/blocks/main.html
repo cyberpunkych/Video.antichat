@@ -1,0 +1,42 @@
+<div class="wrapper960px main clearfix">
+    <section>
+        <article class="videobox">
+            <div class="videobox-top">
+                <h2><a href="#" class="category" title="Категоря"></a><a href="#test2">Простой PHP инклуд Joomla 3.0 </a></h2>
+                <div class="video-wrapper">
+                    <iframe width="560" height="315" src="http://www.youtube.com/embed/TUT39op2Pp8" frameborder="0" allowfullscreen></iframe>
+                </div>
+                Все просто с aircrack-ng. Сначала смотрим кто присоединяется, потом перехватываем пакеты, потом перебираем по слова...</div>
+            <div class="videobox-bottom clearfix">
+                <div class="videobox-rate"> <span class="up"></span> <span class="rate">+15</span> <span class="down"></span> </div>
+                <span class="videobox-date">20 июля 2011</span> <span class="videobox-nick"><em></em>KevuHack</span> <span class="videobox-comments"><em></em><a href="#">Комментировать</a></span> </div>
+        </article>
+
+        <? if (isset($videos) and is_array($videos)): ?>
+        <? foreach ($videos as $video): ?>
+        <article class="videobox">
+            <div class="videobox-top">
+                <h2><a href="<?=$category['url']?>" class="category"></a><a href="<?=$video['url']?>"><?=$video['title']?></a></h2>
+                <div class="video-wrapper mini"> <img class="video-img" src="<?=$video['img']?>" width="120" height="90"><?=$video['description']?></div>
+            </div>
+            <div class="videobox-bottom clearfix">
+                <div class="videobox-rate"> <span class="up"></span> <span class="rate">+15</span> <span class="down"></span> </div>
+                <span class="videobox-date"><?=$video['date']?></span> <span class="videobox-nick"><em></em><?=$video['author']?></span> <span class="videobox-comments"><em></em><a href="#">4 комментария</a></span> </div>
+        </article>
+        <? endforeach; ?>
+        <? endif; ?>
+
+        <? if isset($pages): ?>
+        <nav>
+            <ul class="pagination">
+            <li><a href="#">&laquo;</a></li>
+                <li><a href="#">1</a></li>
+                <li class="current"><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                 <li><a href="#">&raquo;</a></li>
+            </ul>
+        </nav>
+        <? endif; ?>
+    </section>
+    <? include 'right_col.html'; ?>
+</div>
