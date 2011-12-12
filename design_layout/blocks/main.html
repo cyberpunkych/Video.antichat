@@ -16,7 +16,7 @@
         <? foreach ($videos as $video): ?>
         <article class="videobox">
             <div class="videobox-top">
-                <h2><a href="<?=$category['url']?>" class="category"></a><a href="<?=$video['url']?>"><?=$video['title']?></a></h2>
+                <h2><a href="category.php?cat=<?=$video['category']?>" class="category"></a><a href="videos/watch.php?id=<?=$video['url']?>"><?=$video['title']?></a></h2>
                 <div class="video-wrapper mini"> <img class="video-img" src="<?=$video['img']?>" width="120" height="90"><?=$video['description']?></div>
             </div>
             <div class="videobox-bottom clearfix">
@@ -26,7 +26,7 @@
         <? endforeach; ?>
         <? endif; ?>
 
-        <? if isset($pages): ?>
+        <? if (isset($pages)): ?>
         <nav>
             <ul class="pagination">
             <li><a href="#">&laquo;</a></li>
